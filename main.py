@@ -6,9 +6,7 @@ import datetime
 
 while True:
     if datetime.datetime.now().hour == 16 and datetime.datetime.now().minute == 6:
-
-        # Could add current date/time functionality but its not that interesting really
-        email = yagmail.SMTP(user="pythondummymail3@gmail.com", password='jsugpsdnmedmvvqj')
+        email = yagmail.SMTP(user="email goes here", password='google app password goes here')
         df = pandas.read_excel('people.xlsx')
         for index, row in df.iterrows():
             try:
@@ -19,6 +17,7 @@ while True:
             except:
                 print(row['email'], ' is invalid')
     time.sleep(60)
+    # As long as program is ruuning it will execute once everyday
 
 
 
